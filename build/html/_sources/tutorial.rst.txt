@@ -19,7 +19,7 @@ Sphinx 使用 reStructuredText 作为标记语言, 可以享有 Docutils 为reSt
 ~~~~~~~~~~~~~~~
 Sphinx为Python语言的一个第三方库。我们需要在终端中输入下列命令进行安装: 
 
-.. literalinclude:: install.sh
+.. literalinclude:: _static/install.sh
    :lines: 1
 
 
@@ -28,77 +28,84 @@ Sphinx为Python语言的一个第三方库。我们需要在终端中输入下�
 ~~~~~~~~~~~~~~~
 创建一个用于存放文档的文件夹, 然后在该文件夹路径下运行下列命令快速生成Sphinx项目: 
 
-.. literalinclude:: install.sh
+.. literalinclude:: _static/install.sh
    :lines: 2
 
 接下来会让你选择一些配置: 
 
 1. 设置文档的根路径（回车, 使用默认设置）
 
-.. literalinclude:: interactive.txt
+.. literalinclude:: _static/interactive.txt
    :lines: 1,2
 
 
 2. 是否分离source和build目录（输入y,选择分离, 方便管理）
 
-.. literalinclude:: interactive.txt
+.. literalinclude:: _static/interactive.txt
    :lines: 3,4,5,6
 
 3. 设定模板前缀（回车, 使用默认选项）
 
-.. literalinclude:: interactive.txt
+.. literalinclude:: _static/interactive.txt
    :lines: 7,8,9,10
 
 4. 输入项目名称和作者
 
-.. literalinclude:: interactive.txt
+.. literalinclude:: _static/interactive.txt
    :lines: 11,12,13
 
 5. 输入项目版本号
 
-.. literalinclude:: interactive.txt
+.. literalinclude:: _static/interactive.txt
    :lines: 14,15,16,17,18,19,20
 
 6. 文档语言（回车, 默认即可）
 
-.. literalinclude:: interactive.txt
+.. literalinclude:: _static/interactive.txt
    :lines: 21,22,23,24,25,26
 
 7. 设定文档文就按的后缀
 
-.. literalinclude:: interactive.txt
+.. literalinclude:: _static/interactive.txt
    :lines: 27,28,29
 
 8. 设定首页名称（回车, 选择默认index即可）
 
-.. literalinclude:: interactive.txt
+.. literalinclude:: _static/interactive.txt
    :lines: 30,31,32,33,34
 
 9. 根据需要选择是否开启epub输出(一般用不到, 回车默认不开启即可)
 
-.. literalinclude:: interactive.txt
+.. literalinclude:: _static/interactive.txt
    :lines: 35,36
 
 10. 根据需求选择是否开启相应的Sphinx拓展功能
 
-.. literalinclude:: interactive.txt
+.. literalinclude:: _static/interactive.txt
    :lines: 37,38,39,40,41,42,43,44,45,46,47,48,49
 
 11. 创建项目
 
-.. literalinclude:: interactive.txt
+.. literalinclude:: _static/interactive.txt
    :lines: 50,51,52,53,54,55,56,57,58,59,60,61,62,63
 
 
 项目创建以后目录结构如下所示:
 
-.. literalinclude:: tree.txt
+.. literalinclude:: _static/tree.txt
    :lines: 1,2,3,4,5,6,7,8,9
 
-- build:用来存放通过make html生成文档网页文件的目录
-- source: 存放用于生成文档的源文件
-- conf.py: Sphinx的配置文件
-- index.rst: 主文档
+这里先简单说明一下各个文件的作用：
+
+- build：生成的文件的输出目录
+- source: 存放文档源文件
+- _static：静态文件目录，比如图片等
+- _templates：模板目录
+- conf.py：进行 Sphinx 的配置，如主题配置等
+- index.rst：文档项目起始文件，用于配置文档的显示结构
+- cmd.bat：这是自己加的脚本文件（里面的内容是‘cmd.exe’）,用于快捷的打开windows的命令行
+- make.bat：Windows 命令行中编译用的脚本
+- Makefile：编译脚本，make 命令编译时用
 
 定义文档结构
 ~~~~~~~~~~~~~~~
@@ -120,7 +127,7 @@ toctree指令初始值如下:
 ~~~~~~~~~~~~~~~
 * Spinx本身不支持.md文件生成文档, 需要我们使用第三方库recommonmark进行转换。 首先分别运行下列命令安装recommonmark与sphinx_rtd_theme库。
 
-.. literalinclude:: install.sh
+.. literalinclude:: _static/install.sh
    :lines: 3,4
 
 
@@ -139,7 +146,7 @@ toctree指令初始值如下:
 ~~~~~~~~~~~~~~~
 在Sphinx项目所在的文件夹路径下运行下列命令生成文档: 
 
-.. literalinclude:: install.sh
+.. literalinclude:: _static/install.sh
    :lines: 5
 
 生成后的文档位于build/html文件夹内, 用浏览器打开index.html即可看到生成后的文档。

@@ -232,11 +232,17 @@ where &quot;builder&quot; is one of the supported builders, e.g. html, latex or 
     └── index.rst
 </pre></div>
 </div>
+<p>这里先简单说明一下各个文件的作用：</p>
 <ul class="simple">
-<li><p>build:用来存放通过make html生成文档网页文件的目录</p></li>
-<li><p>source: 存放用于生成文档的源文件</p></li>
-<li><p>conf.py: Sphinx的配置文件</p></li>
-<li><p>index.rst: 主文档</p></li>
+<li><p>build：生成的文件的输出目录</p></li>
+<li><p>source: 存放文档源文件</p></li>
+<li><p>_static：静态文件目录，比如图片等</p></li>
+<li><p>_templates：模板目录</p></li>
+<li><p>conf.py：进行 Sphinx 的配置，如主题配置等</p></li>
+<li><p>index.rst：文档项目起始文件，用于配置文档的显示结构</p></li>
+<li><p>cmd.bat：这是自己加的脚本文件（里面的内容是‘cmd.exe’）,用于快捷的打开windows的命令行</p></li>
+<li><p>make.bat：Windows 命令行中编译用的脚本</p></li>
+<li><p>Makefile：编译脚本，make 命令编译时用</p></li>
 </ul>
 </section>
 <section id="id3">
